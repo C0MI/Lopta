@@ -69,11 +69,11 @@ def run_simulacija():
             return
         vreme_poslednjeg = sada
 
-        # izračunavanje ubrzanja
+        # izracunavanje ubrzanja
         ax = -otpor * brzina_x / masa
         ay = gravitacija - otpor * brzina_y / masa
 
-        # Dodavanje normalne sile ako dodiruje pod
+        # dodavj normalnu silu ako dodiruje pod
         if y + r > VISINA:
             y = VISINA - r
             brzina_y = -brzina_y * ODBIJANJE
@@ -83,16 +83,16 @@ def run_simulacija():
         else:
             ay -= k * (R - y) / masa
 
-        # Ažuriranje brzina
+        # azuriranje brzina
         brzina_x += ax * dt
         brzina_y += ay * dt
 
-        # Ažuriranje pozicije
+        # azuriranje pozicije
         x += brzina_x * dt
         y += brzina_y * dt
 
-        # Dodavanje tačke u trag
-        trag.append((x, y))
+       
+        trag.append((x, y))   # dodavanje tačke u trag
 
         # Crtanje
         canvas.delete("lopta")

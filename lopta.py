@@ -8,7 +8,7 @@ ODBIJANJE = 0.7  # koeficijent odbijanja
 R = 0.1  # m poluprečnik lopte
 
 simulacija_aktivna = False  # za prekid simulacije
-
+ 
 def pokreni_simulaciju():
     global simulacija_aktivna
     if simulacija_aktivna:
